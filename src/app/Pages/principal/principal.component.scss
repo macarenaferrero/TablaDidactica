@@ -1,0 +1,112 @@
+ion-content{
+  background-image: url('../../../assets/general/2.png');
+}
+
+
+ion-content{
+  --background: none;
+}
+
+.row{
+  margin-top: 15%;
+}
+
+/* ANIMALES, NÚMEROS, Y COLORES */
+.container-fluid.m-t {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila */
+    gap: 20px;
+  }
+
+  .col-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .col-6 img {
+    max-width: 100%;
+    height: auto; /* Esto mantendrá la proporción de aspecto de las imágenes */
+  }
+}
+
+.rounded{
+  height: 170px;
+  width: 170px;
+  margin: 24px;
+}
+.column{
+  padding-right: 10%;
+  padding-left: 0%;
+}
+
+
+#imgBotonesLog{
+  height: 58px;
+  width: 58px;
+  display:block;
+  margin:auto;
+  border-radius: 2rem;
+  background-color: rgb(255, 255, 255);
+
+}
+
+#btnLogs{
+  height: 70px;
+  width: 70px;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:5px;
+  padding-right:5px;
+  border-radius: 50%;
+}
+
+.container-fluid{
+  padding-top: 5px;
+}
+ion-col{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+  .rounded{
+    height: 170px;
+    width: 170px;
+    margin: 20px;
+
+  }
+  .column{
+    padding-right: 1%;
+    padding-left: 3%;
+    padding-top: 0%;
+    margin-top: 0%;
+
+  }
+  .container-fluid{
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .row {
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+  .container-fluid{
+    height: 85vh;
+  }
+  #btnLogs{
+    height: 70px;
+    width: 70px;
+    padding: 0%;
+  }
+  #imgBotonesLog{
+    height: 40px;
+    width: 40px;
+  }
+
+}

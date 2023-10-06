@@ -1,0 +1,46 @@
+ion-content{
+  background-image: url('../../../assets/general/2.png');
+}
+
+
+ion-content{
+  --background: none;
+}
+
+ion-card-header{
+  display: flex;
+  flex-direction: column; /* Cambia el flujo de columnas en lugar de filas */
+  align-items: center;
+  justify-content: center;
+}
+
+img{
+  width: 100%;
+}
+
+
+ion-card{
+  background-image: url('../../../assets/general/2.png');
+  height: 100vh;
+}
+
+
+h1,h2,h3{
+  font-family: 'Waiting for the Sunrise', cursive;
+  font-weight: bold;
+  color: white;
+}
+
+h3{
+  font-size: 1.5rem;
+}
+
+
+.custom-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: white;
+}

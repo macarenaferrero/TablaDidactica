@@ -1,0 +1,46 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tabla Didactica</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card color="medium">
+    <ion-card-header>
+      <img src="../../../assets/general/idioma_icon.png">
+    </ion-card-header>
+
+    <ion-row class="custom-margin">
+      <ion-col class="form-group">
+        <button type="button" class="btn button-rectangular" id="btnLogs" (click)="accesoRapidoPaciente1()">
+          <img id="imgBotonesLog" src="../../../assets/general/usuariogral.png">
+        </button>
+      </ion-col>
+      <ion-col class="form-group">
+        <button type="button" class="btn button-rectangular" id="btnLogs" (click)="accesoRapidoEspecialista1()">
+          <img id="imgBotonesLog" src="../../../assets/general/invitado.png">
+        </button>
+      </ion-col>
+      <ion-col class="form-group">
+        <button type="button" class="btn button-rectangular" id="btnLogs" (click)="accesoRapidoAdmin()">
+          <img id="imgBotonesLog" src="../../../assets/general/admin.png">
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-card-content class="custom-center">
+      <form [formGroup]="loginUsuario">
+        <ion-item>
+          <ion-input type="email" fill="solid" label="Correo electrónico" labelPlacement="floating"
+            helperText="Ingrese un correo válido" errorText="Correo inválido" ngModel formControlName="email"
+            email></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="Password" fill="solid" label="Contraseña" labelPlacement="floating"
+            helperText="Ingrese una contraseña de mínimo 6 carácteres" errorText="Contraseña inválida" ngModel formControlName="pass"
+            ></ion-input>
+        </ion-item>
+        <ion-button expand="full" (click)="login()" [disabled]="loginUsuario.invalid">Aceptar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

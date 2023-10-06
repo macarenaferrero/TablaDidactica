@@ -1,0 +1,136 @@
+<ion-content>
+
+
+  <ion-fab vertical="top" horizontal="start" slot="fixed" class="ios fab-horizontal-start fab-vertical-top hydrated">
+    <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated" *ngIf="this.idioma==='ingles'">
+      <img style="width: 75px" src="../../../assets/buttons/ingles.png">
+    </ion-fab-button>
+    <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated" *ngIf="this.idioma==='portugues'">
+      <img style="width: 75px" src="../../../assets/buttons/brasil.png">
+    </ion-fab-button>
+    <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated" *ngIf="this.idioma==='espaniol'">
+      <img style="width: 75px" src="../../../assets/buttons/españa.png">
+    </ion-fab-button>
+     <ion-fab-list side="end" class="ios fab-list-side-end hydrated">
+      <ion-fab-button (click)="selectEspaniol()" color="light" class="ion-color ion-color-light ios fab-button-in-list ion-activatable ion-focusable hydrated">
+        <img style="width: 55px; background-color: #ffffff;" src="../../../assets/buttons/españa.png">
+      </ion-fab-button>
+      <ion-fab-button (click)="selectPortugues()" color="light" class="ion-color ion-color-light ios fab-button-in-list ion-activatable ion-focusable hydrated">
+        <img style="width: 55px; background-color: #ffffff;" src="../../../assets/buttons/brasil.png">
+      </ion-fab-button>
+      <ion-fab-button (click)="selectIngles()" color="light" class="ion-color ion-color-light ios fab-button-in-list ion-activatable ion-focusable hydrated">
+        <img style="width: 55px; background-color: #ffffff;" src="../../../assets/buttons/ingles.png">
+      </ion-fab-button>
+
+    </ion-fab-list>
+  </ion-fab>
+
+
+
+    <ion-fab horizontal="end" vertical="top" slot="fixed" class="ios fab-horizontal-end fab-vertical-top hydrated">
+      <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated"  *ngIf="this.tema==='colores'">
+        <img style="width: 75px" src="../../../assets/buttons/rojo.jpg">
+      </ion-fab-button>
+      <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated"  *ngIf="this.tema==='numeros'">
+        <img style="width: 75px" src="../../../assets/buttons/uno.jpg">
+      </ion-fab-button>
+      <ion-fab-button color="secondary" class="ion-color ion-color-secondary ios ion-activatable ion-focusable hydrated"  *ngIf="this.tema==='animales'">
+        <img style="width: 75px" src="../../../assets/buttons/cocodrilo.jpg">
+      </ion-fab-button>
+      <ion-fab-list side="start" class="ios fab-list-side-start hydrated">
+        <ion-fab-button (click)="selectAnimales()" color="secondary" class="ion-color ion-color-light ios fab-button-in-list ion-activatable ion-focusable hydrated">
+          <img style="width: 37px; background-color: #ffffff;" src="../../../assets/buttons/cocodrilo.jpg">
+        </ion-fab-button>
+        <ion-fab-button (click)="selectNumeros()" color="secondary" class="ion-color ion-color-light ios fab-button-in-list ion-activatable ion-focusable hydrated">
+          <img style="width: 37px; background-color: #ffffff;" src="../../../assets/buttons/uno.jpg">
+        </ion-fab-button>
+        <ion-fab-button (click)="selectColores()" color="secondary" class="ion-color ion-color-light ios fab-button-in-list ion-activatable ion-focusable hydrated">
+          <img style="width: 37px; background-color: #ffffff;" src="../../../assets/buttons/rojo.jpg">
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+
+
+
+  <!-- ANIMALES -->
+  <div class="container-fluid" *ngIf="tema === 'animales'">
+    <div class="row">
+      <div class="col-6 col-md-4 column">
+        <img class="rounded border border-dark" src="../../../assets/buttons/leon.jpg" (click)="selecioneAlgo('leon')">
+      </div>
+      <div class="col-6 col-md-4 column">
+        <img class="rounded border border-dark" src="../../../assets/buttons/cebra.jpg" (click)="selecioneAlgo('cebra')"/>
+      </div>
+      <div class="col-6 col-md-4 column">
+        <img class="rounded border border-dark" src="../../../assets/buttons/cocodrilo.jpg" (click)="selecioneAlgo('cocodrilo')">
+      </div>
+      <div class="col-6 col-md-4 column">
+        <img class="rounded border border-dark" src="../../../assets/buttons/elefante.jpg" (click)="selecioneAlgo('elefante')">
+      </div>
+      <div class="col-6 col-md-4 column">
+        <img class="rounded border border-dark bg-info m-4" src="../../../assets/buttons/pavo.jpg" (click)="selecioneAlgo('pavo')">
+      </div>
+      <div class="col-6 col-md-4 column">
+        <img class="rounded border border-dark bg-info m-4" src="../../../assets/buttons/tigre.jpg" (click)="selecioneAlgo('tigre')">
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- NUMEROS -->
+<div class="container-fluid"  *ngIf="this.tema==='numeros'">
+  <div class="row">
+    <div class="col-6 col-md-4 column" >
+      <img class="rounded border border-dark"  src="../../../assets/buttons/uno.jpg" (click)="selecioneAlgo('uno')">
+    </div>
+    <div class="col-6 col-md-4 column" >
+      <img class="rounded border border-dark"  src="../../../assets/buttons/dos.jpg" (click)="selecioneAlgo('dos')">
+    </div>
+    <div class="col-6 col-md-4 column" >
+      <img class="rounded border border-dark"  src="../../../assets/buttons/tres.jpg" (click)="selecioneAlgo('tres')">
+    </div>
+    <div class="col-6 col-md-4 column" >
+      <img class="rounded border border-dark"  src="../../../assets/buttons/cuatro.jpg" (click)="selecioneAlgo('cuatro')">
+    </div>
+    <div class="col-6 col-md-4 column" >
+      <img class="rounded border border-dark"  src="../../../assets/buttons/cinco.jpg" (click)="selecioneAlgo('cinco')">
+    </div>
+    <div class="col-6 col-md-4 column" >
+      <img class="rounded border border-dark"  src="../../../assets/buttons/seis.jpg" (click)="selecioneAlgo('seis')">
+    </div>
+  </div>
+</div>
+
+  <!-- COLORES -->
+
+
+<div class="container-fluid"  *ngIf="this.tema==='colores'">
+  <div class="row">
+    <div class="col-6 col-md-4 column" >
+      <img class="rounded border border-dark" src="../../../assets/buttons/rojo.jpg" (click)="selecioneAlgo('rojo')"/>
+    </div>
+    <div class="col-6 col-md-4 column" >
+      <img class="rounded border border-dark"  src="../../../assets/buttons/azul.jpg" (click)="selecioneAlgo('azul')">
+    </div>
+    <div class="col-6 col-md-4 column" >
+      <img class="rounded border border-dark"  src="../../../assets/buttons/verde.jpg" (click)="selecioneAlgo('verde')">
+    </div>
+    <div class="col-6 col-md-4 column" >
+      <img class="rounded border border-dark"  src="../../../assets/buttons/naranja.jpg" (click)="selecioneAlgo('naranja')">
+    </div>
+    <div class="col-6 col-md-4 column" >
+      <img class="rounded border border-dark"  src="../../../assets/buttons/amarillo.jpg" (click)="selecioneAlgo('amarillo')">
+    </div>
+    <div class="col-6 col-md-4 column" >
+      <img class="rounded border border-dark"  src="../../../assets/buttons/gris.jpg" (click)="selecioneAlgo('gris')">
+    </div>
+  </div>
+</div>
+
+<ion-col class="form-group">
+  <button type="button" class="btn" id="btnLogs" (click)="logOut()">
+    <img id="imgBotonesLog" src="../../../assets/general/logout.jpg">
+  </button>
+</ion-col>
+</ion-content>
