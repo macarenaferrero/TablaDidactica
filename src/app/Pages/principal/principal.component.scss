@@ -44,18 +44,17 @@ ion-content{
 
 
 #imgBotonesLog{
-  height: 58px;
-  width: 58px;
+  height: 48px;
+  width: 48px;
   display:block;
-  margin:auto;
   border-radius: 2rem;
   background-color: rgb(255, 255, 255);
 
 }
 
 #btnLogs{
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   padding-top:5px;
   padding-bottom:5px;
   padding-left:5px;
@@ -70,9 +69,10 @@ ion-col{
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 0vh;
 }
 
-@media screen and (min-width: 800px) {
+@media (min-width: 500px) {
   .rounded{
     height: 170px;
     width: 170px;

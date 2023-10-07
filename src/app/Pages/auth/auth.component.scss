@@ -45,17 +45,20 @@ ion-button {
   flex-direction: column;
   // align-items: center;
   justify-content: center;
-  height: 50vh; /* Opcional para centrar verticalmente */
+  height: 45vh; /* Opcional para centrar verticalmente */
   margin-left: 10px;
 }
 
 #imgBotonesLog {
-  height: 50px;
-  width: 200px;
+  height: 40px;
+  width: 150px;
   background-color: rgb(134, 128, 128);
   border-radius: 45%;
 }
 
+#btnLogs{
+  padding-bottom: 0%;
+}
 .button-rectangular {
   height: auto; /* Ajusta la altura según el contenido */
   width: 100%; /* El ancho se ajustará al 100% del contenedor */
@@ -87,6 +90,12 @@ ion-card-header{
   flex-direction: column; /* Cambia el flujo de columnas en lugar de filas */
   align-items: center;
   justify-content: center;
+  padding-bottom: 0%;
+}
+
+ion-card-content{
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 
 img{
