@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { NativeAudio } from '@awesome-cordova-plugins/native-audio/ngx';
@@ -9,7 +9,7 @@ import { Howl } from 'howler';
   templateUrl: './principal.component.html',
   styleUrls: ['./principal.component.scss'],
 })
-export class PrincipalComponent implements OnInit {
+export class PrincipalComponent implements OnInit{
 
   public idioma: string = "";
   public tema: string = "";
@@ -234,7 +234,8 @@ export class PrincipalComponent implements OnInit {
     },
 
   ];
-  constructor(private router:Router, private afAuth:AngularFireAuth, private nativeAudio: NativeAudio) { }
+  constructor(private router:Router, private afAuth:AngularFireAuth, private el: ElementRef) { }
+
 
   ngOnInit() {
     this.idioma = "espaniol";
@@ -308,4 +309,6 @@ export class PrincipalComponent implements OnInit {
   logOut(){
     this.afAuth.signOut().then(() => this.router.navigate([""]));
   }
+
+
 }

@@ -26,14 +26,14 @@ export class AuthComponent {
     const pass = this.loginUsuario.value.pass;
     this.afAuth.signInWithEmailAndPassword(email, pass)
     .then((user) => {
-      this.toastr.success("Ingreso satisfactorio", "Sesión iniciada", {timeOut: 1000});
+      this.toastr.success('', '', {timeOut: 2000},);
       this.afAuth.currentUser.then(user=>{
         const usuario = user?.email
         console.log(usuario);
       })
       this.router.navigate(['/principal']);
     }).catch((error) => {
-      this.toastr.error("Error", "Error al iniciar sesión", {timeOut: 1000});
+      this.toastr.error("", "", {timeOut: 2000});
     })
   }
 
